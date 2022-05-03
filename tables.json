@@ -1,0 +1,186 @@
+[
+    {
+        "id": "AAAAAAF8js73+ARelQU=",
+        "name": "User",
+        "attributes": [
+            "Id",
+            "first_name",
+            "last_name",
+            "email_adresse",
+            "phone_number",
+            "password",
+            "birthday"
+        ]
+    },
+    {
+        "id": "AAAAAAF8js8nnwSJc/w=",
+        "name": "Owner",
+        "attributes": [
+            "Id",
+            "first_name",
+            "last_name",
+            "email_adresse",
+            "phone_number",
+            "password",
+            "birthday"
+        ]
+    },
+    {
+        "id": "AAAAAAF8js9BSASzja4=",
+        "name": "Barista",
+        "attributes": [
+            "Id",
+            "first_name",
+            "last_name",
+            "email_adresse",
+            "phone_number",
+            "password",
+            "birthday"
+        ]
+    },
+    {
+        "id": "AAAAAAF8js9cCATdhn4=",
+        "name": "Client",
+        "attributes": [
+            "Id",
+            "first_name",
+            "last_name",
+            "email_adresse",
+            "phone_number",
+            "password",
+            "birthday"
+        ]
+    },
+    {
+        "id": "AAAAAAF8jtDDLAUK9CM=",
+        "name": "Super_admin",
+        "attributes": [
+            "Id",
+            "first_name",
+            "last_name",
+            "email_adresse",
+            "phone_number",
+            "password",
+            "birthday"
+        ]
+    },
+    {
+        "id": "AAAAAAF8jtEPSAU4vLM=",
+        "name": "Waiter",
+        "attributes": [
+            "Id",
+            "first_name",
+            "last_name",
+            "email_adresse",
+            "phone_number",
+            "password",
+            "birthday"
+        ]
+    },
+    {
+        "id": "AAAAAAF8jtUH9wXTlZg=",
+        "name": "Order",
+        "attributes": [
+            "Id",
+            "table_number",
+            "amount_to_pay",
+            "payed",
+            "date_time"
+        ]
+    },
+    {
+        "id": "AAAAAAF8jtV9EgX/lFs=",
+        "name": "Coffee_shop",
+        "attributes": [
+            "Id",
+            "denomination",
+            "location",
+            "size",
+            "logo",
+            "capital"
+        ]
+    },
+    {
+        "id": "AAAAAAF8jtdFLQ2qH3g=",
+        "name": "Subscription_pack",
+        "attributes": [
+            "Id",
+            "libelle",
+            "price"
+        ]
+    },
+    {
+        "id": "AAAAAAF8jtfwWxCQMNc=",
+        "name": "Invoice",
+        "attributes": [
+            "Id",
+            "date",
+            "amount",
+            "payed"
+        ]
+    },
+    {
+        "id": "AAAAAAF8jt8SVUB9qSc=",
+        "name": "Product",
+        "attributes": [
+            "Id",
+            "libelle",
+            "description",
+            "price",
+            "ingredients",
+            "review"
+        ]
+    },
+    {
+        "id": "AAAAAAF8juIsPkl6Nj0=",
+        "name": "Image",
+        "attributes": [
+            "Id",
+            "path",
+            "file_name"
+        ]
+    },
+    {
+        "id": "AAAAAAF8jvStogpY4Zo=",
+        "name": "Operation",
+        "attributes": [
+            "Id",
+            "date_time",
+            "type",
+            "Attribute1"
+        ]
+    },
+    {
+        "id": "AAAAAAF8mFIw5E/AQIk=",
+        "name": "Review",
+        "attributes": [
+            "number_stars"
+        ]
+    },
+    {
+        "id": "AAAAAAF9PzxPQphOe0w=",
+        "name": "SubCategorie",
+        "attributes": [
+            "Id",
+            "libelle"
+        ]
+    },
+    {
+        "id": "AAAAAAF9Pzx4X5mGCV8=",
+        "name": "Categorie",
+        "attributes": [
+            "Id",
+            "libelle"
+        ]
+    },
+    {
+        "id": "AAAAAAF9RL8XMStabyw=",
+        "name": "Menu",
+        "attributes": [
+            "Id",
+            "libelle",
+            "special",
+            "day"
+        ]
+    }
+]
