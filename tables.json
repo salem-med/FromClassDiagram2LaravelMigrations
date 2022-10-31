@@ -1,186 +1,908 @@
 [
-    {
-        "id": "AAAAAAF8js73+ARelQU=",
-        "name": "User",
-        "attributes": [
-            "Id",
-            "first_name",
-            "last_name",
-            "email_adresse",
-            "phone_number",
-            "password",
-            "birthday"
-        ]
-    },
-    {
-        "id": "AAAAAAF8js8nnwSJc/w=",
-        "name": "Owner",
-        "attributes": [
-            "Id",
-            "first_name",
-            "last_name",
-            "email_adresse",
-            "phone_number",
-            "password",
-            "birthday"
-        ]
-    },
-    {
-        "id": "AAAAAAF8js9BSASzja4=",
-        "name": "Barista",
-        "attributes": [
-            "Id",
-            "first_name",
-            "last_name",
-            "email_adresse",
-            "phone_number",
-            "password",
-            "birthday"
-        ]
-    },
-    {
-        "id": "AAAAAAF8js9cCATdhn4=",
-        "name": "Client",
-        "attributes": [
-            "Id",
-            "first_name",
-            "last_name",
-            "email_adresse",
-            "phone_number",
-            "password",
-            "birthday"
-        ]
-    },
-    {
-        "id": "AAAAAAF8jtDDLAUK9CM=",
-        "name": "Super_admin",
-        "attributes": [
-            "Id",
-            "first_name",
-            "last_name",
-            "email_adresse",
-            "phone_number",
-            "password",
-            "birthday"
-        ]
-    },
-    {
-        "id": "AAAAAAF8jtEPSAU4vLM=",
-        "name": "Waiter",
-        "attributes": [
-            "Id",
-            "first_name",
-            "last_name",
-            "email_adresse",
-            "phone_number",
-            "password",
-            "birthday"
-        ]
-    },
-    {
-        "id": "AAAAAAF8jtUH9wXTlZg=",
-        "name": "Order",
-        "attributes": [
-            "Id",
-            "table_number",
-            "amount_to_pay",
-            "payed",
-            "date_time"
-        ]
-    },
-    {
-        "id": "AAAAAAF8jtV9EgX/lFs=",
-        "name": "Coffee_shop",
-        "attributes": [
-            "Id",
-            "denomination",
-            "location",
-            "size",
-            "logo",
-            "capital"
-        ]
-    },
-    {
-        "id": "AAAAAAF8jtdFLQ2qH3g=",
-        "name": "Subscription_pack",
-        "attributes": [
-            "Id",
-            "libelle",
-            "price"
-        ]
-    },
-    {
-        "id": "AAAAAAF8jtfwWxCQMNc=",
-        "name": "Invoice",
-        "attributes": [
-            "Id",
-            "date",
-            "amount",
-            "payed"
-        ]
-    },
-    {
-        "id": "AAAAAAF8jt8SVUB9qSc=",
-        "name": "Product",
-        "attributes": [
-            "Id",
-            "libelle",
-            "description",
-            "price",
-            "ingredients",
-            "review"
-        ]
-    },
-    {
-        "id": "AAAAAAF8juIsPkl6Nj0=",
-        "name": "Image",
-        "attributes": [
-            "Id",
-            "path",
-            "file_name"
-        ]
-    },
-    {
-        "id": "AAAAAAF8jvStogpY4Zo=",
-        "name": "Operation",
-        "attributes": [
-            "Id",
-            "date_time",
-            "type",
-            "Attribute1"
-        ]
-    },
-    {
-        "id": "AAAAAAF8mFIw5E/AQIk=",
-        "name": "Review",
-        "attributes": [
-            "number_stars"
-        ]
-    },
-    {
-        "id": "AAAAAAF9PzxPQphOe0w=",
-        "name": "SubCategorie",
-        "attributes": [
-            "Id",
-            "libelle"
-        ]
-    },
-    {
-        "id": "AAAAAAF9Pzx4X5mGCV8=",
-        "name": "Categorie",
-        "attributes": [
-            "Id",
-            "libelle"
-        ]
-    },
-    {
-        "id": "AAAAAAF9RL8XMStabyw=",
-        "name": "Menu",
-        "attributes": [
-            "Id",
-            "libelle",
-            "special",
-            "day"
-        ]
-    }
+  {
+    "id": "AAAAAAF8js73+ARelQU=",
+    "name": "User",
+    "attributes": [
+      {
+        "name": "Id",
+        "type": "int",
+        "criterias": { "unique": true, "id": true }
+      },
+      {
+        "name": "first_name",
+        "type": "string",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "last_name",
+        "type": "string",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "email_address",
+        "type": "string",
+        "criterias": { "unique": true, "id": false }
+      },
+      {
+        "name": "phone_number",
+        "type": "string",
+        "criterias": { "unique": true, "id": false }
+      },
+      {
+        "name": "password",
+        "type": "string",
+        "criterias": { "unique": true, "id": false }
+      },
+      {
+        "name": "birthday",
+        "type": "datetime",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "address",
+        "type": "string",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "biometrics",
+        "type": "bool",
+        "criterias": { "unique": false, "id": false }
+      }
+    ],
+    "associations": []
+  },
+  {
+    "id": "AAAAAAF8js8nnwSJc/w=",
+    "name": "Owner",
+    "attributes": [
+      {
+        "name": "Id",
+        "type": "int",
+        "criterias": { "unique": true, "id": true }
+      },
+      {
+        "name": "first_name",
+        "type": "string",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "last_name",
+        "type": "string",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "email_address",
+        "type": "string",
+        "criterias": { "unique": true, "id": false }
+      },
+      {
+        "name": "phone_number",
+        "type": "string",
+        "criterias": { "unique": true, "id": false }
+      },
+      {
+        "name": "password",
+        "type": "string",
+        "criterias": { "unique": true, "id": false }
+      },
+      {
+        "name": "birthday",
+        "type": "datetime",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "address",
+        "type": "string",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "biometrics",
+        "type": "bool",
+        "criterias": { "unique": false, "id": false }
+      }
+    ],
+    "associations": [
+      { "target": "AAAAAAF8jtV9EgX/lFs=" },
+      { "target": "AAAAAAF8jvStogpY4Zo=" },
+      { "target": "AAAAAAF8jtV9EgX/lFs=" }
+    ]
+  },
+  {
+    "id": "AAAAAAF8js9BSASzja4=",
+    "name": "Barista",
+    "attributes": [
+      {
+        "name": "Id",
+        "type": "int",
+        "criterias": { "unique": true, "id": true }
+      },
+      {
+        "name": "first_name",
+        "type": "string",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "last_name",
+        "type": "string",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "email_address",
+        "type": "string",
+        "criterias": { "unique": true, "id": false }
+      },
+      {
+        "name": "phone_number",
+        "type": "string",
+        "criterias": { "unique": true, "id": false }
+      },
+      {
+        "name": "password",
+        "type": "string",
+        "criterias": { "unique": true, "id": false }
+      },
+      {
+        "name": "birthday",
+        "type": "datetime",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "address",
+        "type": "string",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "biometrics",
+        "type": "bool",
+        "criterias": { "unique": false, "id": false }
+      }
+    ],
+    "associations": [
+      { "target": "AAAAAAF8jtV9EgX/lFs=" },
+      { "target": "AAAAAAGAZu7wNV4J4/w=" },
+      { "target": "AAAAAAGAZu7wNV4J4/w=" },
+      { "target": "AAAAAAF8jtUH9wXTlZg=" },
+      { "target": "AAAAAAF8jtUH9wXTlZg=" }
+    ]
+  },
+  {
+    "id": "AAAAAAF8js9cCATdhn4=",
+    "name": "Client",
+    "attributes": [
+      {
+        "name": "Id",
+        "type": "int",
+        "criterias": { "unique": true, "id": true }
+      },
+      {
+        "name": "first_name",
+        "type": "string",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "last_name",
+        "type": "string",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "email_address",
+        "type": "string",
+        "criterias": { "unique": true, "id": false }
+      },
+      {
+        "name": "phone_number",
+        "type": "string",
+        "criterias": { "unique": true, "id": false }
+      },
+      {
+        "name": "password",
+        "type": "string",
+        "criterias": { "unique": true, "id": false }
+      },
+      {
+        "name": "birthday",
+        "type": "datetime",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "address",
+        "type": "string",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "biometrics",
+        "type": "bool",
+        "criterias": { "unique": false, "id": false }
+      }
+    ],
+    "associations": [
+      { "target": "AAAAAAF8jtUH9wXTlZg=" },
+      { "target": "AAAAAAF8jt8SVUB9qSc=" },
+      { "target": "AAAAAAF8jtUH9wXTlZg=" }
+    ]
+  },
+  {
+    "id": "AAAAAAF8jtDDLAUK9CM=",
+    "name": "Super_admin",
+    "attributes": [
+      {
+        "name": "Id",
+        "type": "int",
+        "criterias": { "unique": true, "id": true }
+      },
+      {
+        "name": "first_name",
+        "type": "string",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "last_name",
+        "type": "string",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "email_address",
+        "type": "string",
+        "criterias": { "unique": true, "id": false }
+      },
+      {
+        "name": "phone_number",
+        "type": "string",
+        "criterias": { "unique": true, "id": false }
+      },
+      {
+        "name": "password",
+        "type": "string",
+        "criterias": { "unique": true, "id": false }
+      },
+      {
+        "name": "birthday",
+        "type": "datetime",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "address",
+        "type": "string",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "biometrics",
+        "type": "bool",
+        "criterias": { "unique": false, "id": false }
+      }
+    ],
+    "associations": []
+  },
+  {
+    "id": "AAAAAAF8jtEPSAU4vLM=",
+    "name": "Waiter",
+    "attributes": [
+      {
+        "name": "Id",
+        "type": "int",
+        "criterias": { "unique": true, "id": true }
+      },
+      {
+        "name": "first_name",
+        "type": "string",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "last_name",
+        "type": "string",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "email_address",
+        "type": "string",
+        "criterias": { "unique": true, "id": false }
+      },
+      {
+        "name": "phone_number",
+        "type": "string",
+        "criterias": { "unique": true, "id": false }
+      },
+      {
+        "name": "password",
+        "type": "string",
+        "criterias": { "unique": true, "id": false }
+      },
+      {
+        "name": "birthday",
+        "type": "datetime",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "address",
+        "type": "string",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "biometrics",
+        "type": "bool",
+        "criterias": { "unique": false, "id": false }
+      }
+    ],
+    "associations": [
+      { "target": "AAAAAAF8jtV9EgX/lFs=" },
+      { "target": "AAAAAAF8jtUH9wXTlZg=" },
+      { "target": "AAAAAAGAZtepTzWpF2c=" },
+      { "target": "AAAAAAGAZtepTzWpF2c=" }
+    ]
+  },
+  {
+    "id": "AAAAAAF8jtUH9wXTlZg=",
+    "name": "Order",
+    "attributes": [
+      {
+        "name": "Id",
+        "type": "int",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "table_number",
+        "type": "",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "amount_to_pay",
+        "type": "float",
+        "criterias": { "unique": true, "id": true }
+      },
+      {
+        "name": "payed",
+        "type": "bool",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "date_time",
+        "type": "datetime",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "table_number",
+        "type": "int",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "state",
+        "type": "string",
+        "criterias": { "unique": false, "id": false }
+      }
+    ],
+    "associations": []
+  },
+  {
+    "id": "AAAAAAF8jtV9EgX/lFs=",
+    "name": "Shop",
+    "attributes": [
+      {
+        "name": "Id",
+        "type": "int",
+        "criterias": { "unique": true, "id": true }
+      },
+      {
+        "name": "denomination",
+        "type": "string",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "location",
+        "type": "geometry",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "size",
+        "type": "",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "logo",
+        "type": "string",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "nbre_tables",
+        "type": "int",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "type",
+        "type": "string",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "description",
+        "type": "string",
+        "criterias": { "unique": false, "id": false }
+      }
+    ],
+    "associations": [{ "target": "AAAAAAF8jtdFLQ2qH3g=" }]
+  },
+  {
+    "id": "AAAAAAF8jtdFLQ2qH3g=",
+    "name": "Subscription_pack",
+    "attributes": [
+      {
+        "name": "Id",
+        "type": "int",
+        "criterias": { "unique": true, "id": true }
+      },
+      {
+        "name": "libelle",
+        "type": "string",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "price",
+        "type": "float",
+        "criterias": { "unique": false, "id": false }
+      }
+    ],
+    "associations": []
+  },
+  {
+    "id": "AAAAAAF8jtfwWxCQMNc=",
+    "name": "Invoice",
+    "attributes": [
+      {
+        "name": "Id",
+        "type": "int",
+        "criterias": { "unique": true, "id": true }
+      },
+      {
+        "name": "date",
+        "type": "datetime",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "amount",
+        "type": "",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "payed",
+        "type": "bool",
+        "criterias": { "unique": false, "id": false }
+      }
+    ],
+    "associations": [
+      { "target": "AAAAAAF8jtV9EgX/lFs=" },
+      { "target": "AAAAAAF8jtV9EgX/lFs=" }
+    ]
+  },
+  {
+    "id": "AAAAAAF8jt8SVUB9qSc=",
+    "name": "Product",
+    "attributes": [
+      {
+        "name": "Id",
+        "type": "int",
+        "criterias": { "unique": true, "id": true }
+      },
+      {
+        "name": "libelle",
+        "type": "string",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "description",
+        "type": "string",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "price",
+        "type": "float",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "ingredients",
+        "type": "string",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "quantite",
+        "type": "int",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "preparation_time",
+        "type": "datetime",
+        "criterias": { "unique": false, "id": false }
+      }
+    ],
+    "associations": [
+      { "target": "AAAAAAF8jtUH9wXTlZg=" },
+      { "target": "AAAAAAF9PzxPQphOe0w=" },
+      { "target": "AAAAAAF9PzxPQphOe0w=" }
+    ]
+  },
+  {
+    "id": "AAAAAAF8juIsPkl6Nj0=",
+    "name": "ImageShop",
+    "attributes": [
+      {
+        "name": "Id",
+        "type": "int",
+        "criterias": { "unique": true, "id": true }
+      },
+      {
+        "name": "path",
+        "type": "string",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "file_name",
+        "type": "",
+        "criterias": { "unique": false, "id": false }
+      }
+    ],
+    "associations": [
+      { "target": "AAAAAAF8jt8SVUB9qSc=" },
+      { "target": "AAAAAAF8jtV9EgX/lFs=" },
+      { "target": "AAAAAAF8jtV9EgX/lFs=" }
+    ]
+  },
+  {
+    "id": "AAAAAAF8jvStogpY4Zo=",
+    "name": "Operation",
+    "attributes": [
+      {
+        "name": "Id",
+        "type": "int",
+        "criterias": { "unique": true, "id": true }
+      },
+      {
+        "name": "date_time",
+        "type": "datetime",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "type",
+        "type": "",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "Attribute1",
+        "type": "",
+        "criterias": { "unique": false, "id": false }
+      }
+    ],
+    "associations": []
+  },
+  {
+    "id": "AAAAAAF8mFIw5E/AQIk=",
+    "name": "Review",
+    "attributes": [
+      {
+        "name": "number_stars",
+        "type": "float",
+        "criterias": { "unique": false, "id": false }
+      }
+    ],
+    "associations": [{ "target": "AAAAAAF8jt8SVUB9qSc=" }]
+  },
+  {
+    "id": "AAAAAAF9PzxPQphOe0w=",
+    "name": "SubCategorie",
+    "attributes": [
+      {
+        "name": "Id",
+        "type": "int",
+        "criterias": { "unique": true, "id": true }
+      },
+      {
+        "name": "libelle",
+        "type": "string",
+        "criterias": { "unique": false, "id": false }
+      }
+    ],
+    "associations": [{ "target": "AAAAAAF9Pzx4X5mGCV8=" }]
+  },
+  {
+    "id": "AAAAAAF9Pzx4X5mGCV8=",
+    "name": "Categorie",
+    "attributes": [
+      {
+        "name": "Id",
+        "type": "int",
+        "criterias": { "unique": true, "id": true }
+      },
+      {
+        "name": "libelle",
+        "type": "string",
+        "criterias": { "unique": false, "id": false }
+      }
+    ],
+    "associations": []
+  },
+  {
+    "id": "AAAAAAF9RL8XMStabyw=",
+    "name": "Menu",
+    "attributes": [
+      {
+        "name": "Id",
+        "type": "int",
+        "criterias": { "unique": true, "id": true }
+      },
+      {
+        "name": "libelle",
+        "type": "string",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "special",
+        "type": "",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "day",
+        "type": "",
+        "criterias": { "unique": false, "id": false }
+      }
+    ],
+    "associations": [
+      { "target": "AAAAAAF8jtV9EgX/lFs=" },
+      { "target": "AAAAAAF8jtV9EgX/lFs=" },
+      { "target": "AAAAAAF8jt8SVUB9qSc=" }
+    ]
+  },
+  {
+    "id": "AAAAAAGAZtepTzWpF2c=",
+    "name": "Recovery_questions",
+    "attributes": [
+      {
+        "name": "id",
+        "type": "int",
+        "criterias": { "unique": true, "id": true }
+      },
+      {
+        "name": "question",
+        "type": "string",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "answer",
+        "type": "string",
+        "criterias": { "unique": false, "id": false }
+      }
+    ],
+    "associations": []
+  },
+  {
+    "id": "AAAAAAGAZu7wNV4J4/w=",
+    "name": "Worker",
+    "attributes": [
+      {
+        "name": "Id",
+        "type": "int",
+        "criterias": { "unique": true, "id": true }
+      },
+      {
+        "name": "denomination",
+        "type": "string",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "location",
+        "type": "geometry",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "size",
+        "type": "",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "logo",
+        "type": "string",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "nbre_tables",
+        "type": "int",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "type",
+        "type": "string",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "description",
+        "type": "string",
+        "criterias": { "unique": false, "id": false }
+      }
+    ],
+    "associations": [
+      { "target": "AAAAAAF8jtV9EgX/lFs=" },
+      { "target": "AAAAAAF8jtV9EgX/lFs=" }
+    ]
+  },
+  {
+    "id": "AAAAAAGAZvyP7o6c8+w=",
+    "name": "AssociationClass1",
+    "attributes": [],
+    "associations": [{ "target": "AAAAAAF8jtUH9wXTlZg=" }]
+  },
+  {
+    "id": "AAAAAAGAZv1JyaG2neU=",
+    "name": "table",
+    "attributes": [
+      {
+        "name": "id",
+        "type": "",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "area",
+        "type": "",
+        "criterias": { "unique": false, "id": false }
+      }
+    ],
+    "associations": [
+      { "target": "AAAAAAF8jtV9EgX/lFs=" },
+      { "target": "AAAAAAF8jtUH9wXTlZg=" },
+      { "target": "AAAAAAGAZwwzffhckUE=" }
+    ]
+  },
+  {
+    "id": "AAAAAAGAZwai/9B4Ick=",
+    "name": "Cleaner",
+    "attributes": [
+      {
+        "name": "Id",
+        "type": "int",
+        "criterias": { "unique": true, "id": true }
+      },
+      {
+        "name": "denomination",
+        "type": "string",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "location",
+        "type": "geometry",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "size",
+        "type": "",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "logo",
+        "type": "string",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "nbre_tables",
+        "type": "int",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "type",
+        "type": "string",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "description",
+        "type": "string",
+        "criterias": { "unique": false, "id": false }
+      }
+    ],
+    "associations": []
+  },
+  {
+    "id": "AAAAAAGAZwwzffhckUE=",
+    "name": "Area",
+    "attributes": [
+      {
+        "name": "id",
+        "type": "int",
+        "criterias": { "unique": true, "id": true }
+      },
+      {
+        "name": "title",
+        "type": "string",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "from",
+        "type": "int",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "to",
+        "type": "int",
+        "criterias": { "unique": false, "id": false }
+      }
+    ],
+    "associations": [
+      { "target": "AAAAAAF8jtV9EgX/lFs=" },
+      { "target": "AAAAAAF8jtEPSAU4vLM=" },
+      { "target": "AAAAAAF8jtV9EgX/lFs=" }
+    ]
+  },
+  {
+    "id": "AAAAAAGAZxLiaTKvCq4=",
+    "name": "Access_points",
+    "attributes": [
+      {
+        "name": "id",
+        "type": "int",
+        "criterias": { "unique": true, "id": true }
+      },
+      {
+        "name": "ssid",
+        "type": "string",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "password",
+        "type": "string",
+        "criterias": { "unique": false, "id": false }
+      }
+    ],
+    "associations": [{ "target": "AAAAAAF8jtV9EgX/lFs=" }]
+  },
+  {
+    "id": "AAAAAAGAaIxFZNzt/zM=",
+    "name": "Reservation",
+    "attributes": [],
+    "associations": []
+  },
+  {
+    "id": "AAAAAAGAbBJ3Gxp+jF8=",
+    "name": "ImageShop",
+    "attributes": [],
+    "associations": []
+  },
+  {
+    "id": "AAAAAAGAbhU65qoOV3c=",
+    "name": "Chef",
+    "attributes": [
+      {
+        "name": "Id",
+        "type": "int",
+        "criterias": { "unique": true, "id": true }
+      },
+      {
+        "name": "denomination",
+        "type": "string",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "location",
+        "type": "geometry",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "size",
+        "type": "",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "logo",
+        "type": "string",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "nbre_tables",
+        "type": "int",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "type",
+        "type": "string",
+        "criterias": { "unique": false, "id": false }
+      },
+      {
+        "name": "description",
+        "type": "string",
+        "criterias": { "unique": false, "id": false }
+      }
+    ],
+    "associations": []
+  }
 ]
