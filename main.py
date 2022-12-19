@@ -1,9 +1,7 @@
 import json
-from subprocess import PIPE, run
+from subprocess import PIPE, run, call
 import os
 
-
-from utils.to_windows_path import path_to_windows_path
 from src.generate_tables_startUML import generate_tables_from_file
 
 def create_models(projectPath, tables):
@@ -12,15 +10,17 @@ def create_models(projectPath, tables):
 
     while len(tables) != len(created):
         cmd = f'vendor/bin/sail artisan make:model {table["name"]} -m'
-        output = run(cmd, stdout=PIPE, stderr=PIPE, universal_newlines=True)
+        output = call(cmd, shell=True, cwd=projectPath)
+        # output = run(cmd, stdout=PIPE, stderr=PIPE, universal_newlines=True)
 
-        result = output.stdout.split("\n")
-        msg = result[0].strip()
+        if output != 0:
+            result = output.stdout.split("\n")
+            msg = result[0].strip()
 
-        if "successfully" in msg:
-            migration = result[1].split(":")[1].strip() + ".php"
-            print(migration)
-            add_migration_content(migration, table)
+            if "successfully" in msg:
+                migration = result[1].split(":")[1].strip() + ".php"
+                print(migration)
+                add_migration_content(migration, table)
 
 
 def save_tables_in_file(tables):
@@ -48,7 +48,7 @@ for table in tables:
 save_tables_in_file(tables)
 
 create_models(
-    "../Laravel_API/NovaTime_API/",
+    "/home/slm/Laravel_API/NovaTime_API",
     tables
 )
 
