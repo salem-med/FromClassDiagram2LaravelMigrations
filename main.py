@@ -11,8 +11,8 @@ def create_models(projectPath, tables):
     created = []
 
     while len(tables) != len(created):
-        cmd = ["php", "artisan", "make:model", table["name"], "-m"]
-        output = run(" ".join(cmd), stdout=PIPE, stderr=PIPE, universal_newlines=True)
+        cmd = f'vendor/bin/sail artisan make:model {table["name"]} -m'
+        output = run(cmd, stdout=PIPE, stderr=PIPE, universal_newlines=True)
 
         result = output.stdout.split("\n")
         msg = result[0].strip()
@@ -27,7 +27,7 @@ def save_tables_in_file(tables):
     json.dump(tables, open("tables.json", "w"))
 
 def add_migration_content(migration, table):
-    with open(".\\database\\migrations\\" + migration, "a") as f:
+    with open("./database/migrations/" + migration, "a") as f:
         while True:
             if "$table->id" in f.readline():
                 break
@@ -40,7 +40,7 @@ def add_migration_content(migration, table):
         f.writelines(lines)
 
 
-tables = generate_tables_from_file(r"working_environnement.mdj")
+tables = generate_tables_from_file(r"/mnt/c/Users/salem/DATA/Others_projects/SporGate/modelization/class_diagram.mdj")
 
 for table in tables:
     print(table)
@@ -48,7 +48,7 @@ for table in tables:
 save_tables_in_file(tables)
 
 create_models(
-    "\\\\wsl.localhost\kali-linux\\home\\slm\\test-app",
+    "../Laravel_API/NovaTime_API/",
     tables
 )
 
